@@ -1,0 +1,42 @@
+﻿@model TVZPitalica.DAL.Entities.Test
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Test</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TestName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TestName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxScore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaxScore)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WriteDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WriteDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
